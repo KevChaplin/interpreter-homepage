@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import ProTip from './ProTip';
 
 import Copyright from './components/Copyright'
-import ButtonAppBar from './components/App-bar.js'
+import ButtonAppBar from './components/App-bar/App-bar.js'
 
 
 export default function App() {
