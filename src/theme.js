@@ -1,3 +1,4 @@
+import { withTheme } from '@emotion/react';
 import { red } from '@mui/material/colors';
 import { createTheme } from '@mui/material/styles';
 
@@ -13,6 +14,17 @@ const theme = createTheme({
     error: {
       main: red.A400,
     },
+    text: {
+      primary: 'white'
+    }
+  },
+  typography: {
+    h1 : {
+      fontSize: '3rem',
+    },
+    h2: {
+      fontSize: '2rem'
+    }
   },
 });
 
