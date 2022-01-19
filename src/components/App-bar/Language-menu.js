@@ -31,12 +31,13 @@ export default function LanguageMenu() {
       <Menu
         id="language-menu"
         MenuListProps={{
-          'aria-labelledby': 'fade-button',
+          'aria-labelledby': 'fade-button'
         }}
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        TransitionComponent={Fade}>
+        TransitionComponent={Fade}
+        >
         <MenuItem onClick={handleClose}>English</MenuItem>
         <MenuItem onClick={handleClose}>Japanese</MenuItem>
         <MenuItem onClick={handleClose}>Polish</MenuItem>

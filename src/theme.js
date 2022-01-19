@@ -1,6 +1,7 @@
 import { withTheme } from '@emotion/react';
 import { red } from '@mui/material/colors';
 import { createTheme } from '@mui/material/styles';
+import { palette } from '@mui/system';
 
 // A custom theme for this app
 const theme = createTheme({
@@ -14,8 +15,12 @@ const theme = createTheme({
     error: {
       main: red.A400,
     },
+    white: {
+      main: '#ffffff'
+    },
     text: {
-      primary: 'white'
+      primary: '#ffffff',
+      secondary: '#000000'
     }
   },
   typography: {
@@ -25,6 +30,18 @@ const theme = createTheme({
     h2: {
       fontSize: '2rem'
     }
+  },
+  components: {
+    // Name of the component
+    MuiPaper: {
+      styleOverrides: {
+        // Name of the slot
+        root: {
+          // Some CSS
+          backgroundColor: '#556cd6',
+        },
+      },
+    },
   },
 });
 

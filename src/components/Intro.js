@@ -16,16 +16,16 @@ export default function Intro() {
             alignItems: 'center',
             minHeight: '100vh',
             Width: '100vw',
-            backgroundColor: 'rgba(0,0,0,0.5)'
+            backgroundColor: 'rgba(0,0,0,0.6)'
             }}>
-                <Typography variant="h1" align="center">
+                <Typography id="top"variant="h1" align="center">
                     Andrzej Zacharski, Ph.D.
                 </Typography>
                 <Typography variant="h2" align="center">
                     World class interpretation in Polish, English, Japanese, Russian and German.
                     Business, Politics, Art, Sports, Tourism and more.
                 </Typography>
-                <Typography variant="body1">
+                <Typography id="about-me" variant="body1">
                     Andrzej Zacharski, Ph.D. is a native of Poland and originally came to Tokyo in 2003, to study Japanese culture.
                     He graduated from the Meisei University, with the speciality in Japanese language and in 2019 he completed the doctoral course at the University of the Ryukyus, in Okinawa.
                     His natural talent for learning foreign languages has led him to work as multilingual interpreter for various international organizations.
