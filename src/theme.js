@@ -1,10 +1,8 @@
-import { withTheme } from '@emotion/react';
 import { red } from '@mui/material/colors';
-import { createTheme } from '@mui/material/styles';
-import { palette } from '@mui/system';
+import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 
 // A custom theme for this app
-const theme = createTheme({
+let theme = createTheme({
   palette: {
     primary: {
       main: '#556cd6',
@@ -28,7 +26,7 @@ const theme = createTheme({
       fontSize: '3rem',
     },
     h2: {
-      fontSize: '2rem'
+      fontSize: '1.8rem'
     }
   },
   components: {
@@ -44,5 +42,6 @@ const theme = createTheme({
     },
   },
 });
+theme = responsiveFontSizes(theme);
 
 export default theme;
