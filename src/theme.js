@@ -5,7 +5,7 @@ import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 let theme = createTheme({
   palette: {
     primary: {
-      main: '#556cd6',
+      main: '#571185',
     },
     secondary: {
       main: '#19857b',
@@ -36,7 +36,7 @@ let theme = createTheme({
         // Name of the slot
         root: {
           // Some CSS
-          backgroundColor: '#556cd6',
+          backgroundColor: '#571185',
         },
       },
     },
