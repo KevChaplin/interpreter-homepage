@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
@@ -9,8 +8,9 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+import MenuIcon from '@mui/icons-material/Menu';
 
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 export default function NavMenu() {
   const theme = useTheme()
@@ -25,8 +25,51 @@ export default function NavMenu() {
     setAnchorEl(null);
   };
 
+  const navItems = [ 
+    { key: 1, name: "Top", link: "top"},
+    { key: 2, name: "About Me", link: "about-me"},
+    { key: 3, name: "My Work", link: "my-work"},
+    { key: 4, name: "Contact Me", link: "contact-me"}
+  ]
+
+  const navElementsMobile = navItems.map( item => {
+    return (
+      <MenuItem key={item.key}>
+        <Link
+          onClick={handleClose}
+          activeClass="active"
+          to={item.link}
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={700}
+        >
+          {item.name}
+        </Link>  
+      </MenuItem>
+    )
+  })
+
+  const navElementButtons = navItems.map( item => {
+    return (
+      <Button key={item.key * 10} variant="text" color="white">
+          <Link
+            activeClass="active"
+            to={item.link}
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            {item.name}
+          </Link>  
+        </Button>
+    )
+  })
+  
   return (
     <Box>
+      {/* for mobile devices, use nav icon */}
       {isMobile ? (
         <>
           <IconButton
@@ -47,112 +90,16 @@ export default function NavMenu() {
             anchorEl={anchorEl}
             open={open}
             onClose={handleClose}
-            TransitionComponent={Fade}>
-            <MenuItem>
-              <Link
-                onClick={handleClose}
-                activeClass="active"
-                to="top"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={700}
-              >
-                Top
-              </Link>  
-            </MenuItem>
-            <MenuItem>
-              <Link
-                onClick={handleClose}
-                activeClass="active"
-                to="about-me"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={700}
-              >
-                About Me
-              </Link>  
-            </MenuItem>
-            <MenuItem>
-              <Link
-                onClick={handleClose}
-                activeClass="active"
-                to="my-work"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={700}
-              >
-                My Work
-              </Link>  
-            </MenuItem>
-            <MenuItem>
-              <Link
-                onClick={handleClose}
-                activeClass="active"
-                to="contact-form"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={700}
-              >
-                Contact
-              </Link>  
-            </MenuItem>
+            TransitionComponent={Fade}
+          >
+            {navElementsMobile}
           </Menu>
         </>
       )
+      // for devices larger than mobile, use nav buttons
     : (
       <Stack spacing={2} direction="row">
-        <Button variant="text" color="white">
-          <Link
-            activeClass="active"
-            to="top"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            Top
-          </Link>  
-        </Button>
-        <Button variant="text" color="white">
-          <Link
-            activeClass="active"
-            to="about-me"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            About Me
-          </Link>  
-        </Button>
-        <Button variant="text" color="white">
-          <Link
-            activeClass="active"
-            to="my-work"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            My Work
-          </Link>  
-        </Button>
-        <Button variant="text" color="white">
-          <Link
-            activeClass="active"
-            to="contact-form"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            Contact
-          </Link>  
-        </Button>
+        {navElementButtons}
       </Stack>
       )
     }

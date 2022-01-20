@@ -11,7 +11,7 @@ export default function App() {
       <ButtonAppBar />
       <Intro />
       <div id="my-work">My Work</div>
-      <div id="contact-form">Contact Form</div>
+      <div id="contact-me">Contact Form</div>
       <Copyright />
     </React.Fragment>
   );
