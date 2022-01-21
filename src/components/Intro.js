@@ -12,17 +12,15 @@ export default function Intro() {
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
-console.log(isMobile)
-
     const flagSizes = {
         small: ["32", "24" ],
         large: ["48", "36"]
     }
 
-    const languages = [ 
-        { key: 1, language: "English", abbrev: "gb" },
-        { key: 2, language: "Japanese", abbrev: "jp" },
-        { key: 3, language: " Polish", abbrev: "pl" },
+    const languages = [
+        { key: 1, language: "Polish", abbrev: "pl" },
+        { key: 2, language: "English", abbrev: "gb" },
+        { key: 3, language: "Japanese", abbrev: "jp" },
         { key: 4, language: "Russian", abbrev: "ru" },
         { key: 5, language: "German", abbrev: "de" }
      ]
@@ -39,7 +37,6 @@ console.log(isMobile)
             </img>
         )
     })
-
 
     return (
         <Box sx={{
