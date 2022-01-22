@@ -5,55 +5,67 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import ListSubheader from '@mui/material/ListSubheader';
 
-import pic01 from '../images/01.jpg'
-import pic02 from '../images/02.jpg'
-import pic03 from '../images/03.jpg'
-import pic04 from '../images/04.jpg'
-import pic05 from '../images/05.jpg'
-import pic06 from '../images/06.jpg'
-import pic07 from '../images/07.jpg'
-import pic08 from '../images/08.jpg'
-import pic09 from '../images/09.jpg'
-import pic10 from '../images/10.jpg'
+import ImageModal from './Image-modal.js'
+
+import pic01url from '../images/01.jpg'
+import pic02url from '../images/02.jpg'
+import pic03url from '../images/03.jpg'
+import pic04url from '../images/04.jpg'
+import pic05url from '../images/05.jpg'
+import pic06url from '../images/06.jpg'
+import pic07url from '../images/07.jpg'
+import pic08url from '../images/08.jpg'
+import pic09url from '../images/09.jpg'
+import pic10url from '../images/10.jpg'
 
 const MyWork = () => {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
-  const fullscreenImg = {
-    img: pic01,
-    title: "Doing some interpreter stuff somewhere",
-    subtitle: "Klingon, Japanese, Polish"
-  }
+  const [ modalImage, setModalImage ] = React.useState(
+    { 
+      name: "pic01", 
+      url: pic01url,
+      title: "Doing some interpreter stuff somewhere",
+      subtitle: "Klingon, Japanese, Polish"
+    }
+  )
 
-  const showFullscreen = (item) => {
-    console.log(item)
+  const handleImageClick = (e) => { 
+    setModalImage( () => {
+      for (let i=0; i<itemData.length; i++) {
+        if (itemData[i].name === e.target.parentNode.id ) {
+          return itemData[i]
+        }
+      }
+    })
+    handleOpen()
   }
 
   return (
-    <Box id="my-work" sx={{ width: 1, display: "flex", justifyContent: 'center', backgroundColor: "white" }}>>
-    {/* <Box sx={{width: '100vw', height: '100vh', display: "flex", justifyContent: 'center', position: 'fixed', top: 0, left: 0, backgroundColor: 'pink', visibility: 'visible', zIndex: 2}}>
-      <img
-        src={fullscreenImg.img}
-        alt={fullscreenImg.title}
-        max-width='1000px'
-        height='auto'
-        loading="lazy"
-      />
-    </Box> */}
+    <Box id="my-work" sx={{ width: 1, display: "flex", justifyContent: 'center', backgroundColor: "white" }}>
+    <ImageModal open={open} handleOpen={handleOpen} handleClose={handleClose} modalImage={modalImage}/>
       <ImageList sx={{ width: 1000, height: "auto" }}>
         <ImageListItem key="Subheader" cols={2}>
           <ListSubheader component="div">My Work</ListSubheader>
         </ImageListItem>
         {itemData.map((item) => (
-          <ImageListItem key={item.img} onClick={() => showFullScreen(item)}>
+          <ImageListItem key={item.name} id={item.name} onClick={(e) => handleImageClick(e)}>
             <img
-              src={`${item.img}?w=248&fit=crop&auto=format`}
-              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+              src={`${item.url}?w=248&fit=crop&auto=format`}
+              srcSet={`${item.url}?w=248&fit=crop&auto=format&dpr=2 2x`}
               alt={item.title}
               loading="lazy"
             />
             <ImageListItemBar
               title={item.title}
               subtitle={item.subtitle}
+              sx={{
+                '& .MuiImageListItemBar-titleWrap': {
+                  pointerEvents: 'none',
+                }
+              }}
             />
           </ImageListItem>
         ))}
@@ -63,56 +75,66 @@ const MyWork = () => {
 }
 
 const itemData = [
-  {
-    img: pic01,
+  { 
+    name: "pic01", 
+    url: pic01url,
     title: "Doing some interpreter stuff somewhere",
     subtitle: "Klingon, Japanese, Polish"
   },
   {
-    img: pic02,
+    name: "pic02", 
+    url: pic02url,
     title: "Doing some interpreter stuff somewhere",
     subtitle: "Klingon, Japanese, Polish"
   },
   {
-    img: pic03,
+    name: "pic03", 
+    url: pic03url,
     title: "Doing some interpreter stuff somewhere",
     subtitle: "Klingon, Japanese, Polish"
   },
   {
-    img: pic04,
+    name: "pic04", 
+    url: pic04url,
     title: "Doing some interpreter stuff somewhere",
     subtitle: "Klingon, Japanese, Polish"
   },
   {
-    img: pic05,
+    name: "pic05", 
+    url: pic05url,
     title: "Doing some interpreter stuff somewhere",
     subtitle: "Klingon, Japanese, Polish"
   },
   {
-    img: pic06,
+    name: "pic06", 
+    url: pic06url,
     title: "Doing some interpreter stuff somewhere",
     subtitle: "Klingon, Japanese, Polish"
   },
   {
-    img: pic07,
+    name: "pic07", 
+    url: pic07url,
     title: "Doing some interpreter stuff somewhere",
     subtitle: "Klingon, Japanese, Polish"
   },
   {
-    img: pic08,
+    name: "pic08", 
+    url: pic08url,
     title: "Doing some interpreter stuff somewhere",
     subtitle: "Klingon, Japanese, Polish"
   },
   {
-    img: pic09,
+    name: "pic09", 
+    url: pic09url,
     title: "Doing some interpreter stuff somewhere",
     subtitle: "Klingon, Japanese, Polish"
   },
   {
-    img: pic10,
+    name: "pic10", 
+    url: pic10url,
     title: "Doing some interpreter stuff somewhere",
     subtitle: "Klingon, Japanese, Polish"
-  }
+  },
 ];
 
 export default MyWork
