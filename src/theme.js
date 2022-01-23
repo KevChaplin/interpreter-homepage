@@ -40,6 +40,15 @@ let theme = createTheme({
         },
       },
     },
+    MuiImageListItemBar: {
+      styleOverrides: {
+        // Name of the slot
+        root: {
+          // Some CSS
+          backgroundColor: 'rgb(0, 0, 0)',
+        },
+      },
+    },
   },
 });
 theme = responsiveFontSizes(theme);

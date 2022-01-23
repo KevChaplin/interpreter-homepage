@@ -12,17 +12,15 @@ export default function Intro() {
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
-console.log(isMobile)
-
     const flagSizes = {
         small: ["32", "24" ],
         large: ["48", "36"]
     }
 
-    const languages = [ 
-        { key: 1, language: "English", abbrev: "gb" },
-        { key: 2, language: "Japanese", abbrev: "jp" },
-        { key: 3, language: " Polish", abbrev: "pl" },
+    const languages = [
+        { key: 1, language: "Polish", abbrev: "pl" },
+        { key: 2, language: "English", abbrev: "gb" },
+        { key: 3, language: "Japanese", abbrev: "jp" },
         { key: 4, language: "Russian", abbrev: "ru" },
         { key: 5, language: "German", abbrev: "de" }
      ]
@@ -39,7 +37,6 @@ console.log(isMobile)
             </img>
         )
     })
-
 
     return (
         <Box sx={{
@@ -61,46 +58,6 @@ console.log(isMobile)
                         </Typography>
                         <Stack direction="row" justifyContent="center" alignItems="center" spacing={3}>
                             {flags}
-                            {/* <img
-                                src="https://flagcdn.com/72x54/gb.png"
-                                srcSet="https://flagcdn.com/144x108/gb.png 2x,
-                                    https://flagcdn.com/216x162/gb.png 3x"
-                                width="48"
-                                height="36"
-                                alt="English">    
-                            </img>
-                            <img
-                                src="https://flagcdn.com/72x54/jp.png"
-                                srcSet="https://flagcdn.com/144x108/jp.png 2x,
-                                    https://flagcdn.com/216x162/jp.png 3x"
-                                width="48"
-                                height="36"
-                                alt="Japanese">    
-                            </img>
-                            <img
-                                src="https://flagcdn.com/72x54/pl.png"
-                                srcSet="https://flagcdn.com/144x108/pl.png 2x,
-                                    https://flagcdn.com/216x162/pl.png 3x"
-                                width="48"
-                                height="36"
-                                alt="Polish">
-                            </img>
-                            <img
-                                src="https://flagcdn.com/72x54/ru.png"
-                                srcSet="https://flagcdn.com/144x108/ru.png 2x,
-                                    https://flagcdn.com/216x162/ru.png 3x"
-                                width="48"
-                                height="36"
-                                alt="Russian">
-                            </img>
-                            <img
-                                src="https://flagcdn.com/72x54/de.png"
-                                srcSet="https://flagcdn.com/144x108/de.png 2x,
-                                    https://flagcdn.com/216x162/de.png 3x"
-                                width="48"
-                                height="36"
-                                alt="German">
-                            </img> */}
                         </Stack>
                         <Typography variant="h2" align="center">
                             World class interpretation in Polish, English, Japanese, Russian and German.
