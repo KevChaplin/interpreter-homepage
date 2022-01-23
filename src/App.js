@@ -1,10 +1,10 @@
 import * as React from 'react';
 
-import ButtonAppBar from './components/App-bar/App-bar.js'
-import Intro from './components/Intro.js'
-import MyWork from './components/My-work.js'
+import ButtonAppBar from './components/App-bar/App-bar'
+import Intro from './components/Intro'
+import MyWork from './components/My-work'
 import Copyright from './components/Copyright'
-
+import Contact from './components/Contact'
 
 export default function App() {
   return (
@@ -12,7 +12,7 @@ export default function App() {
       <ButtonAppBar />
       <Intro />
       <MyWork />
-      <div id="contact-me">Contact Form</div>
+      <Contact />
       <Copyright />
     </React.Fragment>
   );

@@ -42,9 +42,7 @@ const MyWork = () => {
       <ImageList sx={{ width: 1000, height: "auto" }}>
         <ImageListItem key="Subheader" cols={2}>
           <ListSubheader component="div">
-            <Typography variant="h2">
-              My Work
-            </Typography>
+            <Typography variant="h2" gutterBottom>My Work</Typography>
           </ListSubheader>
         </ImageListItem>
         {imagesData.map((item) => (
