@@ -45,7 +45,7 @@ let theme = createTheme({
         // Name of the slot
         root: {
           // Some CSS
-          backgroundColor: 'rgba(0, 0, 0, 0.75)',
+          backgroundColor: 'rgb(0, 0, 0)',
         },
       },
     },

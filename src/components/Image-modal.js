@@ -10,9 +10,9 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 export default function ImageModal(props) {
 
   const theme = useTheme()
-  const isMedScreen = useMediaQuery(theme.breakpoints.down('sm'))
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
-  const boxWidth = isMedScreen ? '100vw' : 'auto'
+  const boxWidth = isMobile ? '100vw' : 'auto'
 
   const style = {
     position: 'absolute',
@@ -48,7 +48,7 @@ export default function ImageModal(props) {
               sx={{
                 '& .MuiImageListItemBar-titleWrap': {
                   pointerEvents: 'none',
-                },
+                }
               }}
             />
           </Box>
