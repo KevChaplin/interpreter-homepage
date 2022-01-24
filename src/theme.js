@@ -21,14 +21,14 @@ let theme = createTheme({
       secondary: '#000000'
     }
   },
-  typography: {
-    h1 : {
-      fontSize: '3rem',
-    },
-    h2: {
-      fontSize: '1.8rem'
-    }
-  },
+  // typography: {
+  //   h1 : {
+  //     fontSize: '3rem',
+  //   },
+  //   h2: {
+  //     fontSize: '1.8rem'
+  //   }
+  // },
   components: {
     // Name of the component
     MuiPaper: {

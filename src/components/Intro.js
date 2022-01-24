@@ -59,7 +59,7 @@ export default function Intro() {
                         <Stack direction="row" justifyContent="center" alignItems="center" spacing={3}>
                             {flags}
                         </Stack>
-                        <Typography variant="h2" align="center">
+                        <Typography variant="h4" align="center">
                             World class interpretation in Polish, English, Japanese, Russian and German.
                             <br />Business, Politics, Art, Sports, Tourism and more.
                         </Typography>
