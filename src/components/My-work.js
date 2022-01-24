@@ -1,10 +1,9 @@
 import React from 'react';
-import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-import ListSubheader from '@mui/material/ListSubheader';
 
 import ImageModal from './Image-modal.js'
 import imagesData from '../images/images-data.js';
@@ -37,35 +36,34 @@ const MyWork = () => {
   }
 
   return (
-    <Box id="my-work" sx={{ width: 1, display: "flex", justifyContent: 'center', backgroundColor: "white" }}>
-    <ImageModal open={open} handleOpen={handleOpen} handleClose={handleClose} modalImage={modalImage}/>
-      <ImageList sx={{ width: 1000, height: "auto" }}>
-        <ImageListItem key="Subheader" cols={2}>
-          <ListSubheader component="div">
+    <Paper id="my-work" 
+      sx={{maxWidth: '1000px', display: "flex", justifyContent: 'center', my: 2, mx: 'auto', px: [1, 4]}}>
+      <ImageModal open={open} handleOpen={handleOpen} handleClose={handleClose} modalImage={modalImage}/>
+        <ImageList sx={{ width: 1000, height: "auto" }}>
+          <ImageListItem key="Subheader" cols={2}>
             <Typography variant="h2" gutterBottom>My Work</Typography>
-          </ListSubheader>
-        </ImageListItem>
-        {imagesData.map((item) => (
-          <ImageListItem key={item.name} id={item.name} onClick={(e) => handleImageClick(e)}>
-            <img
-              src={`${item.url}?w=248&fit=crop&auto=format`}
-              srcSet={`${item.url}?w=248&fit=crop&auto=format&dpr=2 2x`}
-              alt={item.title}
-              loading="lazy"
-            />
-            <ImageListItemBar
-              title={item.title}
-              subtitle={item.subtitle}
-              sx={{
-                '& .MuiImageListItemBar-titleWrap': {
-                  pointerEvents: 'none',
-                }
-              }}
-            />
           </ImageListItem>
-        ))}
+          {imagesData.map((item) => (
+            <ImageListItem key={item.name} id={item.name} onClick={(e) => handleImageClick(e)}>
+              <img
+                src={`${item.url}?w=248&fit=crop&auto=format`}
+                srcSet={`${item.url}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                alt={item.title}
+                loading="lazy"
+              />
+              <ImageListItemBar
+                title={item.title}
+                subtitle={item.subtitle}
+                sx={{
+                  '& .MuiImageListItemBar-titleWrap': {
+                    pointerEvents: 'none',
+                  }
+                }}
+              />
+            </ImageListItem>
+          ))}
       </ImageList>
-    </Box>
+    </Paper>
   );
 }
 

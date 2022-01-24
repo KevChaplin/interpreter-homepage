@@ -8,7 +8,7 @@ import { Typography } from '@mui/material';
 
 export default function Contact() {
     return (
-        <Card id="contact-me" style={{maxWidth:1000, margin:"10px auto", padding:"20px 5px"}}>
+        <Card id="contact-me" sx={{maxWidth:1000, my:5, mx: "auto", py: 3, px: [2, 5]}}>
             <CardContent>
                 <Typography variant="h2" gutterBottom>Contact Me</Typography>
                 <Typography variant="body1" gutterBottom>
