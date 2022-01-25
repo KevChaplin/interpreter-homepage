@@ -5,7 +5,7 @@ import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 let theme = createTheme({
   palette: {
     primary: {
-      main: 'rgba(87, 17 , 133, 1.0)',
+      main: 'rgba(0, 99, 199)',
     },
     secondary: {
       main: '#19857b',
@@ -29,7 +29,7 @@ let theme = createTheme({
         // Name of the slot
         root: {
           // Some CSS
-          backgroundColor: 'rgba(87, 17 , 133, 0.9)',
+          backgroundColor: 'rgba(0, 99, 199, 0.7)',
         },
       },
     },

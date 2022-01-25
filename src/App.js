@@ -12,10 +12,9 @@ import Contact from './components/Contact'
 import introBackgroundImg from './images/intro_background.jpg'
 
 export default function App() {
+  
   return (
-    <Box sx={{
-      backgroundImage: `url(${introBackgroundImg})`,
-      backgroundSize: 'cover'}}>
+    <Box sx={{backgroundImage: `url(${introBackgroundImg})`, backgroundSize: 'cover'}}> 
       <ButtonAppBar />
       <Intro />
       <AboutMe />

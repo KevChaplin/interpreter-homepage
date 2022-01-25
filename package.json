@@ -16,7 +16,8 @@
     "react": "latest",
     "react-dom": "latest",
     "react-scripts": "latest",
-    "react-scroll": "^1.8.4"
+    "react-scroll": "^1.8.4",
+    "react-scroll-parallax": "^3.0.0"
   },
   "browserslist": {
     "production": [
