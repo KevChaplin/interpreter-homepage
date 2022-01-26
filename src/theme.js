@@ -5,7 +5,7 @@ import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 let theme = createTheme({
   palette: {
     primary: {
-      main: '#571185',
+      main: 'rgba(0, 99, 199)',
     },
     secondary: {
       main: '#19857b',
@@ -18,17 +18,10 @@ let theme = createTheme({
     },
     text: {
       primary: '#ffffff',
-      secondary: '#000000'
+      secondary: '#858585',
+      // secondary: '#000000'
     }
   },
-  // typography: {
-  //   h1 : {
-  //     fontSize: '3rem',
-  //   },
-  //   h2: {
-  //     fontSize: '1.8rem'
-  //   }
-  // },
   components: {
     // Name of the component
     MuiPaper: {
@@ -36,7 +29,7 @@ let theme = createTheme({
         // Name of the slot
         root: {
           // Some CSS
-          backgroundColor: '#571185',
+          backgroundColor: 'rgba(0, 99, 199, 0.9)',
         },
       },
     },

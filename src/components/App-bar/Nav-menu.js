@@ -86,6 +86,7 @@ export default function NavMenu() {
             id="navigation-menu"
             MenuListProps={{
               'aria-labelledby': 'fade-button',
+              sx: {backgroundColor: "primary.main"}
             }}
             anchorEl={anchorEl}
             open={open}

@@ -36,7 +36,7 @@ const MyWork = () => {
   }
 
   return (
-    <Paper id="my-work" 
+    <Paper id="my-work"
       sx={{maxWidth: '1000px', display: "flex", justifyContent: 'center', my: 2, mx: 'auto', px: [1, 4]}}>
       <ImageModal open={open} handleOpen={handleOpen} handleClose={handleClose} modalImage={modalImage}/>
         <ImageList sx={{ width: 1000, height: "auto" }}>
