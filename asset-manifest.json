@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.js": "/interpreter-homepage/static/js/main.6d77b2d1.js",
+    "static/media/intro_background.jpg": "/interpreter-homepage/static/media/intro_background.d041c06ff46e1e3fb5ec.jpg",
+    "static/media/06.jpg": "/interpreter-homepage/static/media/06.1dad776a68240ceb15a5.jpg",
+    "static/media/07.jpg": "/interpreter-homepage/static/media/07.387fe9a8cc81d7d95a4c.jpg",
+    "static/media/03.jpg": "/interpreter-homepage/static/media/03.4d7057f8f53d6e8fb6a1.jpg",
+    "static/media/10.jpg": "/interpreter-homepage/static/media/10.3efd6c8d82d6edae501f.jpg",
+    "static/media/08.jpg": "/interpreter-homepage/static/media/08.75af798176567e28209f.jpg",
+    "static/media/04.jpg": "/interpreter-homepage/static/media/04.c05bfaf57f34045bd836.jpg",
+    "static/media/05.jpg": "/interpreter-homepage/static/media/05.8b1be4c5e096e890bc3e.jpg",
+    "static/media/01.jpg": "/interpreter-homepage/static/media/01.b5c2d7dc5a818a9d19a2.jpg",
+    "static/media/09.jpg": "/interpreter-homepage/static/media/09.4a521f2e5eaae4b8e640.jpg",
+    "static/media/02.jpg": "/interpreter-homepage/static/media/02.0fdc88529c6ca116b77e.jpg",
+    "static/media/portrait.jpg": "/interpreter-homepage/static/media/portrait.fd79035b8ece04d53b34.jpg",
+    "index.html": "/interpreter-homepage/index.html",
+    "main.6d77b2d1.js.map": "/interpreter-homepage/static/js/main.6d77b2d1.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.6d77b2d1.js"
+  ]
+}
