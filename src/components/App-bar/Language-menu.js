@@ -5,16 +5,25 @@ import LanguageIcon from '@mui/icons-material/Language';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
+import { useTranslation } from 'react-i18next'
+
+const lngs = {
+  en: { nativeName: 'English' },
+  jp: { nativeName: '日本語' }
+};
 
 export default function LanguageMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  
   const open = Boolean(anchorEl);
-  const handleClick = (event) => {
+  const handleClickIcon = (event) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
     setAnchorEl(null);
   };
+  
+  const { t, i18n } = useTranslation()
 
   return (
     <Box>
@@ -24,7 +33,7 @@ export default function LanguageMenu() {
         color="inherit"
         aria-label="menu"
         sx={{ ml: 2 }}
-        onClick={handleClick}
+        onClick={handleClickIcon}
       >
         <LanguageIcon />
       </IconButton>
@@ -39,11 +48,18 @@ export default function LanguageMenu() {
         onClose={handleClose}
         TransitionComponent={Fade}
         >
-        <MenuItem onClick={handleClose}>English</MenuItem>
-        <MenuItem onClick={handleClose}>Japanese</MenuItem>
-        <MenuItem onClick={handleClose}>Polish</MenuItem>
-        <MenuItem onClick={handleClose}>Russian</MenuItem>
-        <MenuItem onClick={handleClose}>German</MenuItem>
+        {Object.keys(lngs).map((lng) => (
+            <MenuItem 
+              key={lng} 
+              style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }} 
+              type="submit" 
+              onClick={() => {
+                i18n.changeLanguage(lng)
+                handleClose()}
+              }>
+              {lngs[lng].nativeName}
+            </MenuItem>
+          ))}
       </Menu>
     </Box>
   );

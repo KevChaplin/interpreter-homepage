@@ -6,11 +6,14 @@ import Fade from '@mui/material/Fade';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
+import { useTranslation } from 'react-i18next'
 
 export default function ImageModal(props) {
 
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+
+  const { t } = useTranslation()
 
   const boxWidth = isMobile ? '100vw' : 'auto'
 
@@ -43,8 +46,8 @@ export default function ImageModal(props) {
           <Box sx={style} onClick={props.handleClose}>
             <img src={props.modalImage.url} style={{'width': '100%'}}/>
             <ImageListItemBar
-              title={props.modalImage.title}
-              subtitle={props.modalImage.subtitle}
+              title={t(`myWork.${props.modalImage.name}.title`)}
+              subtitle={t(`myWork.${props.modalImage.name}.subtitle`)}
               sx={{
                 '& .MuiImageListItemBar-titleWrap': {
                   pointerEvents: 'none',

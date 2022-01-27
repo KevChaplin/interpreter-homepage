@@ -6,6 +6,8 @@ import App from './App';
 import theme from './theme';
 import { ParallaxProvider } from 'react-scroll-parallax'
 
+import './i18n';
+
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <CssBaseline />

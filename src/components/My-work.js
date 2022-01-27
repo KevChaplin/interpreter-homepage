@@ -4,23 +4,25 @@ import Typography from '@mui/material/Typography';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
+import { useTranslation } from 'react-i18next'
 
 import ImageModal from './Image-modal.js'
 import imagesData from '../images/images-data.js';
 
-import pic01url from '../images/01.jpg'
+import img01url from '../images/01.jpg'
 
 const MyWork = () => {
+  
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const { t } = useTranslation()
+
   const [ modalImage, setModalImage ] = React.useState(
     { 
-      name: "pic01", 
-      url: pic01url,
-      title: "Doing some interpreter stuff somewhere",
-      subtitle: "Klingon, Japanese, Polish"
+      name: "img01", 
+      url: img01url
     }
   )
 
@@ -41,7 +43,7 @@ const MyWork = () => {
       <ImageModal open={open} handleOpen={handleOpen} handleClose={handleClose} modalImage={modalImage}/>
         <ImageList sx={{ width: 1000, height: "auto" }}>
           <ImageListItem key="Subheader" cols={2}>
-            <Typography variant="h2" gutterBottom>My Work</Typography>
+            <Typography variant="h2" gutterBottom>{t('myWork.title')}</Typography>
           </ImageListItem>
           {imagesData.map((item) => (
             <ImageListItem key={item.name} id={item.name} onClick={(e) => handleImageClick(e)}>
@@ -52,8 +54,8 @@ const MyWork = () => {
                 loading="lazy"
               />
               <ImageListItemBar
-                title={item.title}
-                subtitle={item.subtitle}
+                title={t(`myWork.${item.name}.title`)}
+                subtitle={t(`myWork.${item.name}.subtitle`)}
                 sx={{
                   '& .MuiImageListItemBar-titleWrap': {
                     pointerEvents: 'none',
