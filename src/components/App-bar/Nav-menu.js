@@ -9,12 +9,16 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import MenuIcon from '@mui/icons-material/Menu';
+import { useTranslation } from 'react-i18next'
+
 
 import { Link } from "react-scroll";
 
 export default function NavMenu() {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+
+  const { t } = useTranslation()
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -26,10 +30,10 @@ export default function NavMenu() {
   };
 
   const navItems = [ 
-    { key: 1, name: "Top", link: "top"},
-    { key: 2, name: "About Me", link: "about-me"},
-    { key: 3, name: "My Work", link: "my-work"},
-    { key: 4, name: "Contact Me", link: "contact-me"}
+    { key: 1, name: t('nav.top'), link: "top"},
+    { key: 2, name: t('nav.about'), link: "about-me"},
+    { key: 3, name: t('nav.work'), link: "my-work"},
+    { key: 4, name: t('nav.contact'), link: "contact-me"}
   ]
 
   const navElementsMobile = navItems.map( item => {

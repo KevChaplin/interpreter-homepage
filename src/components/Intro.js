@@ -2,10 +2,12 @@ import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import { useTranslation } from 'react-i18next'
 
 export default function Intro() {
 
     const theme = useTheme()
+    const { t } = useTranslation()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
     const flagSizes = {
@@ -41,14 +43,16 @@ export default function Intro() {
                 width: '100%',
                 backgroundColor: 'rgba(0,0,0,0.6)'}}>
             <Typography variant="h1" align="center" >
-                Andrzej Zacharski, Ph.D.
+                {t('intro.title')}
             </Typography>
             <Stack direction="row" justifyContent="center" alignItems="center" spacing={3}>
                 {flags}
             </Stack>
             <Typography variant="h4" align="center">
-                World class interpretation in Polish, English, Japanese, Russian and German.
-                <br />Business, Politics, Art, Sports, Tourism and more.
+                {t('intro.subtitle1')}
+            </Typography>
+            <Typography variant="h4" align="center">
+                {t('intro.subtitle2')}
             </Typography>
         </Stack>
     );
