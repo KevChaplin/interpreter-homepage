@@ -14,9 +14,11 @@ export default function Contact() {
     return (
         <Card id="contact-me" sx={{maxWidth:1000, my:5, mx: "auto", py: 3, px: [2, 5]}}>
             <CardContent>
-                <Typography variant="h2" gutterBottom>Contact Me</Typography>
+                <Typography variant="h2" gutterBottom>
+                    {t('contact.title')}
+                </Typography>
                 <Typography variant="body1" gutterBottom>
-                    Please fill in the form below for enquiries and I will get back to as soon as possible.
+                    {t('contact.subtitle')}
                 </Typography>
                 <form>
                     <Grid container spacing={3} sx={{'pt': 2}}>
