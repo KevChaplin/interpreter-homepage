@@ -27,6 +27,7 @@ const MyWork = () => {
   )
 
   const handleImageClick = (e) => { 
+    console.log("test")
     setModalImage( () => {
       for (let i=0; i<imagesData.length; i++) {
         if (imagesData[i].name === e.target.parentNode.id ) {

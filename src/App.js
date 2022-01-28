@@ -18,7 +18,7 @@ export default function App() {
       <ButtonAppBar />
       <ParallaxBanner
       layers={[
-        { image: introBackgroundImg, speed: -200, style: {zIndex: -10, height: 'auto', backgroundSize: 'auto auto'} },
+        { image: introBackgroundImg, speed: -200, style: {zIndex: -1, height: 'auto', backgroundSize: 'auto auto'} },
       ]}>
         <Intro />
         <AboutMe />
