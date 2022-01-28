@@ -8,18 +8,31 @@ import AboutMe from './components/About-me'
 import MyWork from './components/My-work'
 import Contact from './components/Contact'
 import Copyright from './components/Copyright'
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 import introBackgroundImg from './images/intro_background.jpg'
 
 export default function App() {
-  
+  const theme = useTheme()
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+
+  const bkgdStyle = isMobile ?
+  {zIndex: -1, backgroundAttachment: 'fixed', backgroundSize: 'cover' }
+  : {zIndex: -1, backgroundAttachment: 'scroll', backgroundSize: 'auto auto'}
+
   return (
     <Box> 
       <ButtonAppBar />
       <ParallaxBanner
-      layers={[
-        { image: introBackgroundImg, speed: -200, style: {zIndex: -1, height: 'auto', backgroundSize: 'auto auto'} },
-      ]}>
+        layers={[
+          { 
+            disabled: isMobile ? true : false, 
+            image: introBackgroundImg, 
+            speed: -200, 
+            style: bkgdStyle
+          },
+        ]}>
         <Intro />
         <AboutMe />
         <MyWork />
