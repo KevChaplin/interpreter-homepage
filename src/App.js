@@ -18,8 +18,8 @@ export default function App() {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
   const bkgdStyle = isMobile ?
-  {zIndex: -1, backgroundAttachment: 'fixed', backgroundSize: 'cover' }
-  : {zIndex: -1, backgroundAttachment: 'scroll', backgroundSize: 'auto auto'}
+  {zIndex: -1, backgroundAttachment: 'fixed', backgroundSize: 'auto' }
+  : {zIndex: -1, backgroundAttachment: 'scroll', backgroundSize: 'auto'}
 
   return (
     <Box> 
