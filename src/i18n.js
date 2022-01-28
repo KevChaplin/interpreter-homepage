@@ -81,7 +81,7 @@ i18n
             },
             contact: {
               title: "Contact Me",
-              subtitle: "Please fill in the form below for enquiries and I will get back to as soon as possible.",
+              subtitle: "Please fill in the form below for enquiries and I will get back to you as soon as possible.",
               name: {
                 label: "Name",
                 placeholder: "Enter name"
@@ -169,7 +169,7 @@ i18n
             },
             contact: {
               title: "Contact Me",
-              subtitle: "Please fill in the form below for enquiries and I will get back to as soon as possible.",
+              subtitle: "Please fill in the form below for enquiries and I will get back to you as soon as possible.",
               name: {
                 label: "Name",
                 placeholder: "Enter name"
