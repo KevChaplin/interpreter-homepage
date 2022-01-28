@@ -15,11 +15,11 @@ import introBackgroundImg from './images/intro_background.jpg'
 
 export default function App() {
   const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+  const isLgScreen = useMediaQuery(theme.breakpoints.up('md'))
 
-  const bkgdStyle = isMobile ?
-  {zIndex: -1, backgroundAttachment: 'fixed', backgroundSize: 'auto 100vh' }
-  : {zIndex: -1, backgroundAttachment: 'scroll', backgroundSize: '160%'}
+  const bkgdStyle = isLgScreen ?
+  {zIndex: -1, backgroundAttachment: 'scroll', backgroundSize: '160%'}
+  : {zIndex: -1, backgroundAttachment: 'fixed', backgroundSize: 'auto 100vh' }
 
   return (
     <Box> 
@@ -27,7 +27,7 @@ export default function App() {
       <ParallaxBanner
         layers={[
           { 
-            disabled: isMobile ? true : false, 
+            disabled: isLgScreen ? false : true, 
             image: introBackgroundImg, 
             speed: -200, 
             style: bkgdStyle
