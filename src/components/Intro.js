@@ -42,7 +42,7 @@ export default function Intro() {
                 minHeight: '100vh',
                 width: '100%',
                 backgroundColor: 'rgba(0,0,0,0.6)'}}>
-            <Typography variant="h1" align="center" >
+            <Typography variant="h2" align="center" sx={{wordBreak: 'keep-all'}}>
                 {t('intro.title')}
             </Typography>
             <Stack direction="row" justifyContent="center" alignItems="center" spacing={3}>
