@@ -40,6 +40,15 @@ let theme = createTheme({
           // Some CSS
           backgroundColor: 'rgb(0, 0, 0)',
         },
+        titleWrapBottom: {
+          padding: '8px'
+        },
+        title: {
+          fontSize: '0.8rem'
+        },
+        subtitle: {
+          fontSize: '0.6rem'
+        }
       },
     },
   },
