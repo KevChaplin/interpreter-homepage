@@ -55,7 +55,6 @@ const MyWork = () => {
               />
               <ImageListItemBar
                 title={t(`myWork.${item.name}.title`)}
-                subtitle={t(`myWork.${item.name}.subtitle`)}
                 sx={{
                   '& .MuiImageListItemBar-titleWrap': {
                     pointerEvents: 'none',

@@ -8,7 +8,7 @@ export default function Copyright() {
   const { t } = useTranslation()
 
     return (
-      <Paper>
+      <Paper sx={{py: '1rem'}}>
         <Typography variant="body2" color="text.primary" align="center">
           {`${t("footer.copyright")} © `}
           <Link color="inherit" href="https://mui.com/">
