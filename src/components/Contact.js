@@ -9,12 +9,14 @@ import { useTranslation } from 'react-i18next'
 import { useState } from 'react'
 
 export default function Contact() {
+    // contact form data held in state variables
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
 
     const { t } = useTranslation()
     
+    // Contact form submitted using formatsubmit.io
     function handleSubmit(e) {
         e.preventDefault()
         fetch("https://formsubmit.co/ajax/d19908dd31e0ee7758db5f46e8fc1476", {
@@ -54,7 +56,8 @@ export default function Contact() {
                                 variant="outlined"
                                 value={name}
                                 fullWidth 
-                                required/>
+                                required
+                            />
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <TextField 
@@ -66,7 +69,8 @@ export default function Contact() {
                                 value={email}
                                 variant="outlined" 
                                 fullWidth 
-                                required/>
+                                required
+                            />
                         </Grid>
                         <Grid item xs={12}>
                             <TextField  
@@ -79,7 +83,8 @@ export default function Contact() {
                                 value={message}
                                 variant="outlined" 
                                 fullWidth 
-                                required/>
+                                required
+                            />
                         </Grid>
                         <Grid item xs={12} sm={6} md={3} margin="auto">
                             <Button 
