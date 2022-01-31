@@ -19,25 +19,19 @@ let theme = createTheme({
     text: {
       primary: '#ffffff',
       secondary: '#858585',
-      // secondary: '#000000'
     }
   },
   components: {
-    // Name of the component
     MuiPaper: {
       styleOverrides: {
-        // Name of the slot
         root: {
-          // Some CSS
           backgroundColor: 'rgba(0, 99, 199, 0.9)',
         },
       },
     },
     MuiImageListItemBar: {
       styleOverrides: {
-        // Name of the slot
         root: {
-          // Some CSS
           backgroundColor: 'rgb(0, 0, 0)',
         },
         titleWrapBottom: {
@@ -53,6 +47,7 @@ let theme = createTheme({
     },
   },
 });
+// Set resonsive font size (Material UI functionality)
 theme = responsiveFontSizes(theme);
 
 export default theme;

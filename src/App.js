@@ -1,5 +1,9 @@
 import * as React from 'react';
+
 import Box from '@mui/material/Box';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 import { ParallaxBanner } from 'react-scroll-parallax';
 
 import ButtonAppBar from './components/App-bar/App-bar'
@@ -7,12 +11,11 @@ import Intro from './components/Intro'
 import AboutMe from './components/About-me'
 import MyWork from './components/My-work'
 import Contact from './components/Contact'
-import Copyright from './components/Copyright'
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
+import Footer from './components/Footer'
 
 import introBackgroundImg from './images/intro_background.jpg'
 
+// Application
 export default function App() {
   const theme = useTheme()
   const isLgScreen = useMediaQuery(theme.breakpoints.up('md'))
@@ -24,6 +27,7 @@ export default function App() {
   return (
     <Box> 
       <ButtonAppBar />
+      {/* Parallax scrolling enabled for all elements apart from nav-bar. Parallax disable on smaller screens due to performance issues */}
       <ParallaxBanner
         layers={[
           { 
@@ -37,7 +41,7 @@ export default function App() {
         <AboutMe />
         <MyWork />
         <Contact />
-        <Copyright />
+        <Footer />
       </ParallaxBanner>
     </Box>
   );

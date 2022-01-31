@@ -1,13 +1,17 @@
 import * as React from 'react';
+import { useState } from 'react'
+
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField'
 import { Typography } from '@mui/material';
-import { useTranslation } from 'react-i18next'
-import { useState } from 'react'
 
+import { useTranslation } from 'react-i18next'
+
+
+// Contact Form
 export default function Contact() {
     // contact form data held in state variables
     const [name, setName] = useState('')
@@ -17,6 +21,7 @@ export default function Contact() {
     const { t } = useTranslation()
     
     // Contact form submitted using formatsubmit.io
+    // Yet to be updated with client's email account
     function handleSubmit(e) {
         e.preventDefault()
         fetch("https://formsubmit.co/ajax/d19908dd31e0ee7758db5f46e8fc1476", {

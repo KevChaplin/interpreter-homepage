@@ -1,9 +1,11 @@
 import React from 'react';
+
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
+
 import { useTranslation } from 'react-i18next'
 
 import ImageModal from './Image-modal.js'
@@ -11,6 +13,8 @@ import imagesData from '../images/images-data.js';
 
 import img01url from '../images/01.jpg'
 
+// My Work section showcasing pictures of interpreter's work.
+// On click of image, modal image pop up.
 const MyWork = () => {
   
   const [open, setOpen] = React.useState(false);
@@ -19,6 +23,7 @@ const MyWork = () => {
 
   const { t } = useTranslation()
 
+  // set initial image for modal, will be updated when user clicks on image
   const [ modalImage, setModalImage ] = React.useState(
     { 
       name: "img01", 
@@ -26,6 +31,7 @@ const MyWork = () => {
     }
   )
 
+  // when user clicks on image, image name is cross-referenced with image-data.js to update image modal.
   const handleImageClick = (e) => { 
     setModalImage( () => {
       for (let i=0; i<imagesData.length; i++) {
@@ -56,6 +62,7 @@ const MyWork = () => {
               <ImageListItemBar
                 title={t(`myWork.${item.name}.title`)}
                 sx={{
+                  // to allow click event action when clicking on title bar
                   '& .MuiImageListItemBar-titleWrap': {
                     pointerEvents: 'none',
                   }

@@ -2,8 +2,10 @@ import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+
 import { useTranslation } from 'react-i18next'
 
+// Top of page / title section
 export default function Intro() {
 
     const theme = useTheme()
@@ -15,15 +17,17 @@ export default function Intro() {
         large: ["48", "36"]
     }
 
-    const languages = [
-        { key: 1, language: "Polish", abbrev: "pl" },
-        { key: 2, language: "English", abbrev: "gb" },
-        { key: 3, language: "Japanese", abbrev: "jp" },
+    // List of language flags
+    const languageFlags = [
+        { key: 1, language: "English", abbrev: "gb" },
+        { key: 2, language: "Japanese", abbrev: "jp" },
+        { key: 3, language: "Polish", abbrev: "pl" },
         { key: 4, language: "Russian", abbrev: "ru" },
         { key: 5, language: "German", abbrev: "de" }
      ]
 
-    const flags = languages.map( item => {
+    // Obtain flags based on above list from flagpedia.net
+    const flags = languageFlags.map( item => {
         return (
             <img
                 key={item.key}
