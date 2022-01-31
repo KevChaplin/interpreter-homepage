@@ -19,13 +19,13 @@ Learn Material UI to aid with consistent design and cross-browser functionality.
 
 ## To do
 
-### Setup ready, awaiting materials from client
-- Connect contact form to Client email address.
-- Text for remaining Japanese content, as well as Polish, Russian and German text.
-- Update profile picture
+- **Setup ready, awaiting materials from client**
+-- Connect contact form to Client email address.
+-- Text for remaining Japanese content, as well as Polish, Russian and German text.
+-- Update profile picture
 
-### Possible
-- Integrate calender to enable website visitors to check schedule of interpreter.
+- **Possible**
+-- Integrate calender to enable website visitors to check schedule of interpreter.
 
 ## Tools
 
@@ -37,6 +37,6 @@ Material UI
 Flagpedia: https://flagpedia.net - nice looking national flags  
 React Scroll Parallax: https://react-scroll-parallax.damnthat.tv/docs/ - smooth parallax package  
 React-scroll: https://www.npmjs.com/package/react-scroll - smooth scrolling to link  
-Background Image: https://unsplash.com/ - photo by Charles Forunner, UnSplash 
+Background Image: https://unsplash.com/ - photo by Charles Forunner, UnSplash  
 FormSubmit: https://formsubmit.io/ - handler for contact form
   
