@@ -1,5 +1,5 @@
 # Interpreter Andrzej Zacharski, Ph.D
-## v0.3 WORK-IN-PROGRESS  
+## v0.4 WORK-IN-PROGRESS  
 
 ## Customer project
 

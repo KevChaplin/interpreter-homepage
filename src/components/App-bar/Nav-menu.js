@@ -53,7 +53,8 @@ export default function NavMenu() {
           spy={true}
           smooth={true}
           offset={-70}
-          duration={700}
+          duration={1000}
+          delay={300}
         >
           {item.name}
         </Link>  
@@ -71,7 +72,8 @@ export default function NavMenu() {
             spy={true}
             smooth={true}
             offset={-70}
-            duration={500}
+            duration={1000}
+            delay={300}
           >
             {item.name}
           </Link>  
