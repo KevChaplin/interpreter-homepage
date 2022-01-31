@@ -20,12 +20,12 @@ Learn Material UI to aid with consistent design and cross-browser functionality.
 ## To do
 
 - **Setup ready, awaiting materials from client**
--- Connect contact form to Client email address.
--- Text for remaining Japanese content, as well as Polish, Russian and German text.
--- Update profile picture
+    - Connect contact form to Client email address.
+    - Text for remaining Japanese content, as well as Polish, Russian and German text.
+    - Update profile picture
 
 - **Possible**
--- Integrate calender to enable website visitors to check schedule of interpreter.
+    - Integrate calender to enable website visitors to check schedule of interpreter.
 
 ## Tools
 
