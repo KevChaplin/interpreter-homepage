@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
@@ -6,8 +7,10 @@ import Fade from '@mui/material/Fade';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
+
 import { useTranslation } from 'react-i18next'
 
+// Image modal, pop up on click of photo in My Work section
 export default function ImageModal(props) {
 
   const theme = useTheme()
@@ -15,6 +18,7 @@ export default function ImageModal(props) {
 
   const { t } = useTranslation()
 
+  // image will take up full screen width on smaller screens 
   const boxWidth = isMobile ? '100vw' : 'auto'
 
   const style = {
@@ -49,6 +53,7 @@ export default function ImageModal(props) {
               title={t(`myWork.${props.modalImage.name}.title`)}
               subtitle={t(`myWork.${props.modalImage.name}.subtitle`)}
               sx={{
+                // to allow click event action when clicking on title bar
                 '& .MuiImageListItemBar-titleWrap': {
                   pointerEvents: 'none',
                 }

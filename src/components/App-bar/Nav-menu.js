@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
@@ -9,11 +10,15 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import MenuIcon from '@mui/icons-material/Menu';
+
 import { useTranslation } from 'react-i18next'
 
-
+// smooth scrolling by react-scroll package
 import { Link } from "react-scroll";
 
+// Navigation menu
+// For Small screens menu button to display links
+// For larger screens button for each link
 export default function NavMenu() {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
@@ -22,6 +27,7 @@ export default function NavMenu() {
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+
   const handleClickIcon = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -36,6 +42,7 @@ export default function NavMenu() {
     { key: 4, name: t('nav.contact'), link: "contact-me"}
   ]
 
+  // For smaller screens: Menu items for drop-down box
   const navElementsMobile = navItems.map( item => {
     return (
       <MenuItem key={item.key}>
@@ -46,7 +53,8 @@ export default function NavMenu() {
           spy={true}
           smooth={true}
           offset={-70}
-          duration={700}
+          duration={1000}
+          delay={300}
         >
           {item.name}
         </Link>  
@@ -54,6 +62,7 @@ export default function NavMenu() {
     )
   })
 
+  // For larger screens, menu items have individual button in nav-bar
   const navElementButtons = navItems.map( item => {
     return (
       <Button key={item.key * 10} variant="text" color="white">
@@ -63,7 +72,8 @@ export default function NavMenu() {
             spy={true}
             smooth={true}
             offset={-70}
-            duration={500}
+            duration={1000}
+            delay={300}
           >
             {item.name}
           </Link>  

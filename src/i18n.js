@@ -2,6 +2,9 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
+
+// Internationalization package I18Next.
+// Contains all text for use on web page.
 i18n
   // detect user language
   // learn more: https://github.com/i18next/i18next-browser-languageDetector

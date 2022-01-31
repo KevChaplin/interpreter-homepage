@@ -1,9 +1,11 @@
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
+
 import { useTranslation } from 'react-i18next'
 
 import portrait from '../images/portrait.jpg'
 
+// Bio and protrait 
 export default function AboutMe() {
     const { t } = useTranslation()
 
