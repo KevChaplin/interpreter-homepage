@@ -13,6 +13,7 @@ export default function AboutMe() {
         <Stack id="about-me" direction="column" alignItems="center" justifyContent="center" spacing={5} sx={
             {   gap: 2,
                 px: 2,
+                py: 2,
                 minHeight: '100vh',
                 width: '100%',
                 backgroundColor: 'rgba(0,0,0,0.6)'}}>
@@ -26,6 +27,10 @@ export default function AboutMe() {
                 {t('aboutMe.para2')}
                 <br /><br />
                 {t('aboutMe.para3')}
+                <br /><br />
+                {t('aboutMe.para4')}
+                <br /><br />
+                {t('aboutMe.para5')}
             </Typography>
         </Stack>
     );

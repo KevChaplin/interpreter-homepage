@@ -34,10 +34,12 @@ i18n
               subtitle2: "Business, Politics, Art, Sports, Tourism and more"
             },
             aboutMe: {
-              title: 'About Me',
-              para1: 'Andrzej Zacharski, Ph.D. is a native of Poland and originally came to Tokyo in 2003, to study Japanese culture. He graduated from the Meisei University, with the speciality in Japanese language and in 2019 he completed the doctoral course at the University of the Ryukyus, in Okinawa. His natural talent for learning foreign languages has led him to work as multilingual interpreter for various international organizations.',
-              para2: "For many years he has been co-operating regularly with Polish Karate Federation, Embassy of Poland in Tokyo and Okinawa Prefectural Goverment. In the recent years has also been working for the Public Prosecutor's Office and Okinawa Customs Office. He has experience in teaching martial arts in several languages as well as the languages themselves. His background in sports competition is reflected in the clarity, strength and confidence of his voice.",
-              para3: 'Andrzej can be seen in the 2004 top-ranked Japanese movie "Otosan-no Backdrop", the 2009 hit movie "Hagetaka" , as well as in the movie "Miracle City Koza" in 2022.'
+              title: "About Me",
+              para1: 'Andrzej Zacharski, Ph.D. is a native of Poland and originally came to Tokyo in 2003, to study Japanese culture. He graduated from the Meisei University, with the speciality in Japanese language and in 2019 he completed the doctoral course at the University of the Ryukyus, in Okinawa.',
+              para2: 'His natural talent for learning foreign languages has led him to work as multilingual interpreter for various international organizations.',
+              para3: "For many years he has been co-operating regularly with Polish Karate Federation, Embassy of Poland in Tokyo and Okinawa Prefectural Goverment. In the recent years has also been working for the Public Prosecutor's Office and Okinawa Customs Office.",
+              para4: "He has experience in teaching martial arts in several languages as well as the languages themselves. His background in sports competition is reflected in the clarity, strength and confidence of his voice.",
+              para5: 'Andrzej can be seen in the 2004 top-ranked Japanese movie "Otosan-no Backdrop", the 2009 hit movie "Hagetaka" , as well as in the movie "Miracle City Koza" in 2022.'
             },
             myWork: {
               title: "My Work",
@@ -125,7 +127,10 @@ i18n
               title: 'About Me',
               para1: "アンジェイ ザハルスキ 博士は、日本の文化を勉強するため、2003年にポーランドから来日。2010年に明星大学日本文化学部言語文化学科を卒業し、2019年に琉球大学人文社会研究科の博士後期コースを修了した。現在、マルチ言語通訳者として活躍している",
               para2: "持ち前の才能を生かし、駐日ポーランド共和国大使館・領事館やポーランド空手道連盟など、様々な国際組織で優れた言語能力を発揮している。 2019年から、沖縄県県庁、那覇地方検察庁、沖縄地区税関にも翻訳者と通訳者として協力している。外国語講師、格闘技の指導者や選手として活躍した経験は、明晰で自信に満ち溢れた、張りのある声となって現れている。",
-              para3: "2004年にヒットした「お父さんのバックドロップ」、それから2009年の「ハゲタカ」という映画で、彼の姿を見ることが出来る。"
+              para3: "2004年にヒットした「お父さんのバックドロップ」、それから2009年の「ハゲタカ」という映画で、彼の姿を見ることが出来る。",
+              para4: "2004年にヒットした「お父さんのバックドロップ」、それから2009年の「ハゲタカ」という映画で、彼の姿を見ることが出来る。",
+              para5: "2004年にヒットした「お父さんのバックドロップ」、それから2009年の「ハゲタカ」という映画で、彼の姿を見ることが出来る。"
+
             },
             myWork: {
               title: "My Work",

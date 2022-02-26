@@ -11,12 +11,11 @@ import { useTranslation } from 'react-i18next'
 
 const lngs = {
   en: { nativeName: 'English' },
-  jp: { nativeName: '日本語' }
+  jp: { nativeName: '日本語' },
+  pl: { nativeName: 'Polski' },
+  ru: { nativeName: 'русский' },
+  de: { nativeName: 'Deutsch' }
 };
-// stil to add (will be listed in this order):
-  // pl: { nativeName: 'Polski' },
-  // ru: { nativeName: 'русский' },
-  // de: { nativeName: 'Deutsch' }
 
 // Language selector
 export default function LanguageMenu() {
